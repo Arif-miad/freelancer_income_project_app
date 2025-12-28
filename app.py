@@ -33,9 +33,9 @@ if theme == "Dark":
 # -----------------------------
 # Top Banner Image
 # -----------------------------
-banner_image = "image/demo.PNG"  # Replace with your image path
+banner_image = "image/demo.PNG"  # Replace with your banner path
 image = Image.open(banner_image)
-st.image(image, use_column_width=True)
+st.image(image, use_container_width=True)  # updated parameter
 
 # -----------------------------
 # Load Dataset
@@ -137,20 +137,26 @@ elif page == "ML Prediction App":
         st.success(f"💰 Predicted Annual Income: ${round(pred,2)}")
 
 # -----------------------------
-# Footer with Social Icons
+# Footer with BG color, icons & links
 # -----------------------------
 st.write("---")
 st.markdown("""
-<div style='text-align:center'>
-<p>Developed by <b>Your Name</b></p>
+<div style="
+    background-color:#1f1f1f;  /* Dark grey background */
+    padding:15px;
+    text-align:center;
+    color:white;
+    border-radius:5px;
+">
+<p>Developed by <b>Arif Miah </b></p>
 <p>
-<a href="https://www.youtube.com/" target="_blank">
+<a href="https://www.youtube.com/@ArifNeuralLab" target="_blank">
 <img src="https://cdn-icons-png.flaticon.com/24/1384/1384060.png" width="24"/> YouTube
 </a> &nbsp; | &nbsp;
-<a href="https://www.kaggle.com/" target="_blank">
+<a href="https://www.kaggle.com/miadul" target="_blank">
 <img src="https://cdn-icons-png.flaticon.com/24/196/196566.png" width="24"/> Kaggle
 </a> &nbsp; | &nbsp;
-<a href="https://github.com/" target="_blank">
+<a href="https://github.com/Arif-miad" target="_blank">
 <img src="https://cdn-icons-png.flaticon.com/24/25/25231.png" width="24"/> GitHub
 </a>
 </p>
